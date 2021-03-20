@@ -17,9 +17,11 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    solver.cpp
 
 HEADERS += \
+    includes.h \
     mainwindow.h
 
 FORMS += \
