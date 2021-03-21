@@ -1,23 +1,4 @@
-/**** headers ****/
-#include <iostream>
-#include <cmath>
-
-/**** constants ****/
-
-// This is the limit of size of sudoku board for now
-// you can increase it but larger the sudoku, longer will be time taken to solve it.
-#define MAX 9
-
-/**** function declarations ****/
-
-// utility functions
-void takeInput(int[][MAX]);
-void displaySolution(int [][MAX]);
-bool isFull(int [][MAX]);
-int findPossibleValues(int [][MAX], int [], int , int );
-
-// solver function
-void SolveSudoku(int [][MAX], bool &);
+#include "solver.h"
 
 /**** the main() function ****/
 
@@ -48,7 +29,7 @@ void SolveSudoku(int [][MAX], bool &);
 
 /**** function definations ****/
 
-void takeInput(int sudoku[][MAX])
+void sudoku::takeInput(int sudoku[][MAX])
 {
     std::cout<<"Enter the Initial "<<MAX<<" X "<<MAX<<" Sudoku "<<std::endl;
     std::cout<<"Instruction: Enter 0 for blank"<<std::endl;
@@ -59,7 +40,7 @@ void takeInput(int sudoku[][MAX])
 }
 
 //Function to display Sudoku Board
-void displaySolution(int sudoku[][MAX])
+void sudoku::displaySolution(int sudoku[][MAX])
 {
     for(int i=0;i<(MAX);i++)
     {
@@ -84,7 +65,7 @@ void displaySolution(int sudoku[][MAX])
 }
 
 //to check whether the sudoku is full or not
-bool isFull(int sudoku[][MAX])
+bool sudoku::isFull(int sudoku[][MAX])
 {
     for(int i = 0 ; i < (MAX) ; i++)
         for(int j = 0 ; j < (MAX) ; j++)
@@ -93,7 +74,7 @@ bool isFull(int sudoku[][MAX])
     return true;
 }
 
-int findPossibleValues(int sudoku[][MAX], int a[], int r, int c)
+int sudoku::findPossibleValues(int sudoku[][MAX], int a[], int r, int c)
 {
     int n=0;
     int i,j;
@@ -123,7 +104,7 @@ int findPossibleValues(int sudoku[][MAX], int a[], int r, int c)
 }
 
 
-void SolveSudoku(int sudoku[][MAX], bool &solved_flag)
+void sudoku::SolveSudoku(int sudoku[][MAX], bool &solved_flag)
 {
     int i, j, a[MAX+1]={0}, n=0;
 

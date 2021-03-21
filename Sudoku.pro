@@ -17,12 +17,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp \
-    solver.cpp
+    mainwindow.cpp
 
 HEADERS += \
     includes.h \
-    mainwindow.h
+    mainwindow.h \
+    solver.h
 
 FORMS += \
     mainwindow.ui

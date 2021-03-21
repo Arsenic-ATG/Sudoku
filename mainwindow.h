@@ -2,6 +2,11 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QLabel>
+#include <QString>
+#include <QTableWidget>
+#include "includes.h"
+#include "solver.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -17,5 +22,7 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    int Column, Row;
+    //void click__on_pb(int num);
 };
 #endif // MAINWINDOW_H
