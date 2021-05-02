@@ -14,6 +14,7 @@ class sudoku
 
 public:
     sudoku();
+    int at(int,int);
     void solve();
 };
 

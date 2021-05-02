@@ -25,6 +25,12 @@ bool sudoku::is_full()
     return true;
 }
 
+// reading the borad
+int sudoku::at(int x,int y)
+{
+    return this->board[x][y];
+}
+
 int sudoku::find_possible_values(std::vector<int> &possible_values, int r, int c)
 {
     int n = 0;

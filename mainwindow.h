@@ -2,11 +2,10 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QLabel>
 #include <QString>
 #include <QTableWidget>
 #include "includes.h"
-#include "solver.h"
+#include "sudoku.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -20,9 +19,11 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_solve_button_clicked();
+
 private:
     Ui::MainWindow *ui;
-    int Column, Row;
-    //void click__on_pb(int num);
+
 };
 #endif // MAINWINDOW_H
