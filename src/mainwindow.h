@@ -20,9 +20,13 @@ public:
     ~MainWindow();
 
 private slots:
+
     void on_solve_button_clicked();
+    void keypad_number_pressed();
+
 
 private:
+    int activated_number = 1;
     Ui::MainWindow *ui;
 
 };
