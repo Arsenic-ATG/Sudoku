@@ -713,7 +713,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton">
+          <widget class="QPushButton" name="reset_button">
            <property name="text">
             <string>New Game</string>
            </property>
