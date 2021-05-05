@@ -27,6 +27,8 @@ private slots:
 
     void on_sudoku_board_cellClicked(int row, int column);
 
+    void on_erase_button_released();
+
 private:
     int activated_number = 1;
     Ui::MainWindow *ui;

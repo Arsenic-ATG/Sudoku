@@ -67,6 +67,21 @@ void MainWindow::keypad_number_pressed()
 void MainWindow::on_sudoku_board_cellClicked(int row, int column)
 {
     QTableWidgetItem* cell = ui->sudoku_board->item(row, column);
-    const QString str = QString::number(activated_number);
-    cell->setText(str);
+
+    if(activated_number)
+    {
+        const QString str = QString::number(activated_number);
+        cell->setText(str);
+    }
+    // else erase is selected
+    else
+    {
+        cell->setText("");
+    }
+}
+
+void MainWindow::on_erase_button_released()
+{
+    activated_number = 0;
+    ui->erase_button->setChecked(true);
 }
