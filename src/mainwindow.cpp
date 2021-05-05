@@ -29,6 +29,8 @@ MainWindow::MainWindow(QWidget *parent)
     ui->keypad_button_7->setCheckable(true);
     ui->keypad_button_8->setCheckable(true);
     ui->keypad_button_9->setCheckable(true);
+    ui->erase_button->setCheckable(true);
+
 
     ui->keypad_button_1->setChecked(true);
 
@@ -48,10 +50,8 @@ void MainWindow::on_solve_button_clicked()
         for (int j = 0; j < 9; ++j)
         {
             QTableWidgetItem* Cell = ui->sudoku_board->item(i, j);
-            QString str = "";
-            str += '0' + puzzle.at(i,j);
-            const QString cstr = str;
-            Cell->setText(cstr);
+            const QString str = QString::number(puzzle.at(i,j));
+            Cell->setText(str);
         }
     }
 }
@@ -62,5 +62,11 @@ void MainWindow::keypad_number_pressed()
     QPushButton * button = (QPushButton *)sender();
     activated_number = button->text().toUInt();
     button->setChecked(true);
+}
 
+void MainWindow::on_sudoku_board_cellClicked(int row, int column)
+{
+    QTableWidgetItem* cell = ui->sudoku_board->item(row, column);
+    const QString str = QString::number(activated_number);
+    cell->setText(str);
 }

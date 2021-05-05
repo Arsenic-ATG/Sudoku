@@ -25,6 +25,8 @@ private slots:
     void keypad_number_pressed();
 
 
+    void on_sudoku_board_cellClicked(int row, int column);
+
 private:
     int activated_number = 1;
     Ui::MainWindow *ui;
