@@ -6,9 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>536</width>
-    <height>599</height>
+    <width>378</width>
+    <height>530</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
@@ -27,9 +33,9 @@
      <item>
       <widget class="QTableWidget" name="sudoku_board">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>9</horstretch>
+         <verstretch>9</verstretch>
         </sizepolicy>
        </property>
        <property name="minimumSize">
@@ -37,6 +43,9 @@
          <width>360</width>
          <height>270</height>
         </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">gridline-color: white</string>
        </property>
        <property name="verticalScrollBarPolicy">
         <enum>Qt::ScrollBarAlwaysOff</enum>
@@ -66,6 +75,9 @@
         <property name="text">
          <string/>
         </property>
+        <property name="textAlignment">
+         <set>AlignCenter</set>
+        </property>
        </row>
        <row>
         <property name="text">
@@ -116,10 +128,8 @@
         <property name="text">
          <string/>
         </property>
-       </column>
-       <column>
-        <property name="text">
-         <string/>
+        <property name="textAlignment">
+         <set>AlignCenter</set>
         </property>
        </column>
        <column>
@@ -145,6 +155,14 @@
        <column>
         <property name="text">
          <string/>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="textAlignment">
+         <set>AlignCenter</set>
         </property>
        </column>
        <column>
@@ -155,6 +173,9 @@
        <item row="0" column="0">
         <property name="text">
          <string>0</string>
+        </property>
+        <property name="textAlignment">
+         <set>AlignCenter</set>
         </property>
        </item>
        <item row="0" column="1">
@@ -560,6 +581,19 @@
       </widget>
      </item>
      <item>
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
         <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -698,8 +732,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>536</width>
-     <height>24</height>
+     <width>378</width>
+     <height>22</height>
     </rect>
    </property>
   </widget>

@@ -4,6 +4,8 @@
 #include <QMainWindow>
 #include <QString>
 #include <QTableWidget>
+#include <QtDebug>
+#include <QPalette>
 #include "includes.h"
 #include "sudoku.h"
 

@@ -15,6 +15,7 @@ class sudoku
 public:
     sudoku();
     int at(int,int);
+    void generate_new_puzzle();
     void solve();
 };
 
