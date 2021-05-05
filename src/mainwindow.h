@@ -31,6 +31,8 @@ private slots:
 
     void on_erase_button_released();
 
+    void on_reset_button_clicked();
+
 private:
     int activated_number = 1;
     Ui::MainWindow *ui;

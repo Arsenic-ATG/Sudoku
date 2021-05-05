@@ -115,3 +115,27 @@ void MainWindow::on_erase_button_released()
     activated_number = 0;
     ui->erase_button->setChecked(true);
 }
+
+void MainWindow::on_reset_button_clicked()
+{
+    puzzle.generate_new_puzzle();
+    for (int i = 0; i < 9; ++i)
+    {
+        for (int j = 0; j < 9; ++j)
+        {
+            QTableWidgetItem* Cell = ui->sudoku_board->item(i, j);
+            Cell->setTextAlignment(Qt::AlignCenter);
+            if (puzzle.at(i, j))
+            {
+                const QString str = QString::number(puzzle.at(i, j));
+                Cell->setText(str);
+                Cell->QTableWidgetItem::setBackground(Qt::green);
+                Cell->QTableWidgetItem::setForeground(Qt::black);
+            }
+            else
+            {
+                Cell->setText("");
+            }
+        }
+    }
+}
