@@ -1,4 +1,5 @@
 #include "sudoku.h"
+#include<math.h>
 
 sudoku::sudoku() : MAX(9)
 {

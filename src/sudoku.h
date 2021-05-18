@@ -1,6 +1,8 @@
 #ifndef SUDOKU_H
 
 #include <vector>
+#include<stdlib.h>
+#include<time.h>
 
 #define SUDOKU_H
 
@@ -17,6 +19,9 @@ public:
     int at(int,int);
     void generate_new_puzzle();
     void solve();
+    void column_loop(std::vector<std::vector<int>>,bool[],bool[], int, int);
+    void gen_ins(std::vector<std::vector<int>>);
+    void gen_hide(std::vector<std::vector<int>>);
 };
 
 #endif // SUDOKU_H
